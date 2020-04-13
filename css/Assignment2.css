@@ -1,0 +1,18 @@
+
+body{
+    background-color: #ecf0f1;
+}
+table{
+    width:80%;
+    margin: 0 auto;
+}
+
+label{
+    color: red;
+}
+
+p1{
+  color:blue;
+  font-style: italic; 
+  font-size: smaller; 
+}

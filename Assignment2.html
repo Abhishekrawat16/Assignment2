@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 2 - Abhishek Rawat</title>
+    <link rel="stylesheet" href="css/Assignment2.css" type="text/css">
+    <h1>Assignment 2: Abhishek Rawat</h1>
+</head>
+<body>
+    <div id="ques6">
+        <h4>Solution 6</h4>
+        <p1>Please open browser console to see Output</p1></br></br>
+        <input id="inputString" type="text">
+        <button onclick="view.showString()">Show String</button></br> </br>
+        <input id="position" type="text">
+        <button onclick="view.showHistory()">Show History</button>&emsp;
+        <button onclick="view.clearHistory()">Clear History</button>
+    </div>
+  <div id="ques5">
+     <h4>Solution 5</h4>
+    Project Id &emsp;&emsp;<input id="pid" type="number">
+    Project Name &emsp;&emsp;&ensp;<input id="pname" type="text"></br></br>
+    Project Status &ensp;<select id="pstatus">
+        <option value="inProgress">In Progress</option>
+        <option value="completed">Completed</option>
+    </select>&emsp;&emsp;&emsp;&emsp;&emsp;
+    Project Description &nbsp;<input id="pdesc" type="text"></br></br>
+    <button onclick="view.addProject()">Add Project</button>&emsp;
+    <button onclick="view.displayProjects()">Display Project</button>&emsp;
+    <button onclick="checkInput.checkCount()">Check Count</button></br>
+
+    <label id="ques5op"></label>
+  </div>
+  <hr/>
+  <table id="projectData" border="1">
+    <tbody>
+        <th>Project Id</th>
+        <th>Project Name</th>
+        <th>Project Status</th>
+        <th>Project Description</th>
+    </tbody>
+</table>
+
+    <script type="text/javascript" src="javascript/Assignment2.js"></script>
+</body>
+</html>
