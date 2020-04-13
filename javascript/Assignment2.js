@@ -25,7 +25,7 @@ var checkInput={
             output.setAttribute('style','color:green');
         }
         else{
-            output.textContent="Number of <tr> and project list size missmatch, <tr>="+(trCount-1)+" (excluding header), Project List size="+projectList.projects.length+ ".  Please click on Display Project button to refresh project table"
+            output.innerHTML="Number of tr and project list size is not same <br> tr="+(trCount-1)+" (excluding header)<br> Project List size="+projectList.projects.length+ ". <br> Please click on Display Project button to refresh project table"
             output.setAttribute('style','color:red');
         }
     }
@@ -43,11 +43,21 @@ var view= {
             output.textContent ="No field should remain empty";
         }
         else{
+            output.textContent ="";
+            var isPresent=false;
+            projectList.projects.forEach(project=>{
+                if(project.pId==pId||project.pName==pName){
+                    isPresent=true;
+                    output.textContent ="Two projects cannot have same Project Id or Project Name"
+                }
+            });
+            if(!isPresent){
             projectList.addProject(pId,pName,pStatus,pDesc);
             document.getElementById("pid").value="";
             document.getElementById("pname").value="";
             document.getElementById("pstatus").value="inProgress";
             document.getElementById("pdesc").value="";
+            }
         }
     },
     createStatusDropdown: function (status) {
